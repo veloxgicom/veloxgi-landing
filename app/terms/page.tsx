@@ -4,8 +4,25 @@ import Image from 'next/image'
 import Section from '../(site)/components/Section'
 
 export const metadata: Metadata = {
-  title: 'Términos y Condiciones — Veloxgi',
-  description: 'Términos y condiciones de uso de Veloxgi. Lee nuestros términos de servicio antes de utilizar nuestra plataforma.',
+  title: 'Términos y Condiciones',
+  description: 'Términos y condiciones de uso de Veloxgi. Lee nuestros términos de servicio antes de utilizar nuestra plataforma de gestión logística. Información sobre uso, derechos y obligaciones.',
+  keywords: [
+    'términos y condiciones',
+    'términos de servicio',
+    'condiciones de uso',
+    'términos Veloxgi',
+    'contrato de servicio',
+    'derechos del consumidor'
+  ],
+  openGraph: {
+    title: 'Términos y Condiciones — Veloxgi',
+    description: 'Términos y condiciones de uso de Veloxgi. Lee nuestros términos de servicio antes de utilizar nuestra plataforma.',
+    url: 'https://veloxgi.com/terms',
+    type: 'website',
+  },
+  alternates: {
+    canonical: '/terms',
+  },
 }
 
 export default function TermsPage() {

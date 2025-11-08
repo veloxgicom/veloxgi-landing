@@ -21,18 +21,19 @@ export default function Hero() {
           className={`order-1 lg:order-none transition-all duration-1000 ${imageRef.animationClasses}`}
         >
           {/* Wrapper con capas separadas */}
-          <div className="relative w-full max-w-md lg:max-w-none overflow-visible isolate">
+          <div className="relative w-full max-w-sm mx-auto sm:max-w-md md:max-w-lg lg:max-w-none overflow-visible isolate">
             {/* Fondo verde */}
-            <div className="bg-brand rounded-2xl shadow-card h-[500px] lg:h-[560px] w-full z-0" />
+            <div className="bg-brand rounded-2xl shadow-card h-[320px] sm:h-[400px] md:h-[450px] lg:h-[560px] w-full z-0" />
 
             {/* Imagen flotando por encima del fondo */}
-            <div className="absolute -top-12 -left-[2rem] lg:-top-[4.5rem] lg:-left-12 h-[631px] w-[590px] z-10 pointer-events-none">
+            <div className="absolute -top-14 -left-4 sm:-top-8 sm:-left-6 md:-top-10 md:-left-8 lg:-top-[4.5rem] lg:-left-12 h-[380px] w-[280px] sm:h-[480px] sm:w-[360px] md:h-[540px] md:w-[420px] lg:h-[631px] lg:w-[590px] z-10 pointer-events-none">
               <Image
                 src="/img/hero.png"
                 alt="Cliente feliz con Veloxgi"
                 fill
                 className="object-contain"
                 priority
+                sizes="(max-width: 640px) 280px, (max-width: 768px) 360px, (max-width: 1024px) 420px, 590px"
               />
             </div>
           </div>
@@ -41,13 +42,13 @@ export default function Hero() {
         {/* text */}
         <div 
           ref={textRef.ref}
-          className={`space-y-6 transition-all duration-1000 ${textRef.animationClasses}`}
+          className={`space-y-4 sm:space-y-6 transition-all duration-1000 ${textRef.animationClasses}`}
         >
-          <h1 className="display">Gestiona toda tu logística desde un solo lugar</h1>
-          <p className="text-base muted max-w-lg">
+          <h1 className="display text-center lg:text-left">Gestiona toda tu logística desde un solo lugar</h1>
+          <p className="text-base muted max-w-lg mx-auto lg:mx-0 text-center lg:text-left">
             La herramienta para pequeñas y medianas empresas que centraliza pedidos y ventas de múltiples plataformas, gestiona colaboradores (conductores, repartidores y administrativos) y optimiza cada entrega.
           </p>
-          <div>
+          <div className="flex justify-center lg:justify-start">
             <button
               onClick={openModal}
               className="group inline-flex items-center justify-between gap-3 bg-brand text-ink font-semibold px-6 py-3 rounded-full transition-transform focus-brand hover:bg-brand600"

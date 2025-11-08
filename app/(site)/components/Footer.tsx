@@ -35,7 +35,7 @@ export default function Footer() {
           <div className="space-y-4">
             <h5 className="font-semibold text-lg mb-4 text-white">Sobre nosotros</h5>
             <p className="text-slate-300 text-sm leading-relaxed max-w-sm">
-              Veloxgi — Centraliza la gestión de todos tus marketplaces desde un solo lugar. Optimiza tus ventas, controla tu inventario y haz crecer tu negocio con la velocidad y eficiencia que necesitas.
+              Veloxgi — Centraliza la gestión de todos tus marketplaces en un solo lugar. Optimiza tus ventas, controla tu inventario y haz crecer tu negocio con la velocidad y eficiencia que necesitas.
             </p>
           </div>
 
