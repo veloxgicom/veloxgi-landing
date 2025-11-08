@@ -3,9 +3,12 @@ import Section from './Section'
 import GridBgDark from './GridBgDark'
 import PhoneCollage from './PhoneCollage'
 import { useWaitlist } from './WaitlistProvider'
+import { useScrollAnimation } from './useScrollAnimation'
 
 export default function DarkCta() {
   const { openModal } = useWaitlist()
+  const textRef = useScrollAnimation<HTMLDivElement>({ direction: 'right', delay: 0 })
+  const collageRef = useScrollAnimation<HTMLDivElement>({ direction: 'left', delay: 200 })
 
   return (
     <div className="relative py-10 sm:py-12 lg:py-14">
@@ -14,7 +17,10 @@ export default function DarkCta() {
           <GridBgDark />
 
           {/* Texto (arriba en móvil, derecha en lg) */}
-          <div className="space-y-5 relative z-10 order-1 lg:order-2">
+          <div 
+            ref={textRef.ref}
+            className={`space-y-5 relative z-10 order-1 lg:order-2 transition-all duration-1000 ${textRef.animationClasses}`}
+          >
             <h2 className="h2 text-white">
               Empieza hoy: opera más rápido y con menos errores
             </h2>
@@ -35,7 +41,10 @@ export default function DarkCta() {
           </div>
 
           {/* Collage (abajo en móvil, izquierda en lg) */}
-          <div className="relative z-10 order-2 lg:order-1">
+          <div 
+            ref={collageRef.ref}
+            className={`relative z-10 order-2 lg:order-1 transition-all duration-1000 ${collageRef.animationClasses}`}
+          >
             <PhoneCollage />
           </div>
         </div>

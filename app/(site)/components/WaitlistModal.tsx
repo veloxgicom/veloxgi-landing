@@ -82,7 +82,7 @@ export default function WaitlistModal({ isOpen, onClose }: WaitlistModalProps) {
 
         {/* Intro text */}
         <p className="text-slate-300 text-sm mb-6 leading-relaxed">
-          Sé el primero en saber cuándo nos lanzamos. Únete a nuestra lista de espera exclusiva para acceso anticipado.
+        Obtén acceso anticipado a nuestro lanzamiento. Únete a la lista de espera.
         </p>
 
         {/* Alert box */}

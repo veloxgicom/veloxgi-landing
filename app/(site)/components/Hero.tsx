@@ -4,16 +4,22 @@ import Section from './Section'
 import GridBgLight from './GridBgLight'
 import ActionPill from './ActionPill'
 import { useWaitlist } from './WaitlistProvider'
+import { useScrollAnimation } from './useScrollAnimation'
 
 export default function Hero() {
   const { openModal } = useWaitlist()
+  const imageRef = useScrollAnimation<HTMLDivElement>({ direction: 'right', delay: 0 })
+  const textRef = useScrollAnimation<HTMLDivElement>({ direction: 'left', delay: 200 })
 
   return (
     <div className="relative py-10 sm:py-14 lg:py-16 overflow-hidden">
       <GridBgLight />
       <Section className="relative grid lg:grid-cols-2 gap-10 items-center">
         {/* image card */}
-        <div className="order-1 lg:order-none">
+        <div 
+          ref={imageRef.ref}
+          className={`order-1 lg:order-none transition-all duration-1000 ${imageRef.animationClasses}`}
+        >
           {/* Wrapper con capas separadas */}
           <div className="relative w-full max-w-md lg:max-w-none overflow-visible isolate">
             {/* Fondo verde */}
@@ -22,8 +28,8 @@ export default function Hero() {
             {/* Imagen flotando por encima del fondo */}
             <div className="absolute -top-12 -left-[2rem] lg:-top-[4.5rem] lg:-left-12 h-[631px] w-[590px] z-10 pointer-events-none">
               <Image
-                src="/img/hero.png"   // idealmente PNG con fondo transparente
-                alt="Cliente feliz com cartão next"
+                src="/img/hero.png"
+                alt="Cliente feliz con Veloxgi"
                 fill
                 className="object-contain"
                 priority
@@ -33,7 +39,10 @@ export default function Hero() {
         </div>
 
         {/* text */}
-        <div className="space-y-6">
+        <div 
+          ref={textRef.ref}
+          className={`space-y-6 transition-all duration-1000 ${textRef.animationClasses}`}
+        >
           <h1 className="display">Gestiona toda tu logística desde un solo lugar</h1>
           <p className="text-base muted max-w-lg">
             La herramienta para pequeñas y medianas empresas que centraliza pedidos y ventas de múltiples plataformas, gestiona colaboradores (conductores, repartidores y administrativos) y optimiza cada entrega.

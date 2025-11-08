@@ -2,6 +2,7 @@
 import Image from 'next/image'
 import Section from './Section'
 import { useState } from 'react'
+import { useScrollAnimation } from './useScrollAnimation'
 
 const ADVANTAGES = {
   clientes: [
@@ -30,6 +31,10 @@ const ADVANTAGES = {
 
 export default function GalleryMosaic() {
   const [openSection, setOpenSection] = useState<string | null>('clientes')
+  const textRef = useScrollAnimation<HTMLDivElement>({ direction: 'left', delay: 0 })
+  const image1Ref = useScrollAnimation<HTMLDivElement>({ direction: 'up', delay: 0 })
+  const image2Ref = useScrollAnimation<HTMLDivElement>({ direction: 'up', delay: 150 })
+  const image3Ref = useScrollAnimation<HTMLDivElement>({ direction: 'up', delay: 300 })
 
   const toggleSection = (section: string) => {
     setOpenSection(openSection === section ? null : section)
@@ -39,7 +44,14 @@ export default function GalleryMosaic() {
     <Section className="py-8">
       <div className="grid lg:grid-cols-2 gap-10 items-start">
         {/* Columna izquierda: Ventajas */}
-        <div className="space-y-4 border-l-2 border-ink/20 pl-6">
+        <div 
+          ref={textRef.ref}
+          className={`space-y-4 border-l-2 border-ink/20 pl-6 transition-all duration-1000 ${
+            textRef.isVisible 
+              ? 'opacity-100 translate-x-0' 
+              : 'opacity-0 -translate-x-8'
+          }`}
+        >
           {/* Clientes */}
           <div className="py-4">
             <button
@@ -135,17 +147,61 @@ export default function GalleryMosaic() {
         <div className="grid grid-cols-2 gap-6">
           {/* Primera columna: dos imágenes apiladas */}
           <div className="space-y-6">
-            <div className="relative h-[240px]">
-              <Image src="/img/store.png" alt="Tienda" fill className="rounded-xl object-cover" />
+            <div 
+              ref={image1Ref.ref}
+              className={`relative h-[240px] overflow-hidden rounded-xl transition-all duration-1000 ${
+                image1Ref.isVisible 
+                  ? 'opacity-100 translate-y-0' 
+                  : 'opacity-0 translate-y-8'
+              }`}
+            >
+              <div className="relative w-full h-full group cursor-pointer">
+                <Image 
+                  src="/img/store.png" 
+                  alt="Tienda" 
+                  fill 
+                  className="rounded-xl object-cover transition-transform duration-500 ease-out group-hover:scale-110" 
+                />
+              </div>
             </div>
-            <div className="relative h-[240px]">
-              <Image src="/img/conductor.png" alt="Cliente" fill className="rounded-xl object-cover" />
+            <div 
+              ref={image2Ref.ref}
+              className={`relative h-[240px] overflow-hidden rounded-xl transition-all duration-1000 ${
+                image2Ref.isVisible 
+                  ? 'opacity-100 translate-y-0' 
+                  : 'opacity-0 translate-y-8'
+              }`}
+              style={{ transitionDelay: image2Ref.isVisible ? '150ms' : '0ms' }}
+            >
+              <div className="relative w-full h-full group cursor-pointer">
+                <Image 
+                  src="/img/conductor.png" 
+                  alt="Cliente" 
+                  fill 
+                  className="rounded-xl object-cover transition-transform duration-500 ease-out group-hover:scale-110" 
+                />
+              </div>
             </div>
           </div>
           
           {/* Segunda columna: una imagen vertical */}
-          <div className="relative h-full min-h-[500px]">
-            <Image src="/img/client.png" alt="Conductor" fill className="rounded-xl object-cover" />
+          <div 
+            ref={image3Ref.ref}
+            className={`relative h-full min-h-[500px] overflow-hidden rounded-xl transition-all duration-1000 ${
+              image3Ref.isVisible 
+                ? 'opacity-100 translate-y-0' 
+                : 'opacity-0 translate-y-8'
+            }`}
+            style={{ transitionDelay: image3Ref.isVisible ? '300ms' : '0ms' }}
+          >
+            <div className="relative w-full h-full group cursor-pointer">
+              <Image 
+                src="/img/client.png" 
+                alt="Conductor" 
+                fill 
+                className="rounded-xl object-cover transition-transform duration-500 ease-out group-hover:scale-110" 
+              />
+            </div>
           </div>
         </div>
       </div>
