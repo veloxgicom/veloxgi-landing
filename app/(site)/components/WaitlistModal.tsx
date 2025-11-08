@@ -143,7 +143,7 @@ export default function WaitlistModal({ isOpen, onClose }: WaitlistModalProps) {
             />
             <label htmlFor="privacy" className="text-sm text-slate-300">
               Estoy de acuerdo con la{' '}
-              <a href="#" className="text-brand underline hover:text-brand600 transition-colors">
+              <a href="/privacy" target="_blank" rel="noopener noreferrer" className="text-brand underline hover:text-brand600 transition-colors">
                 política de privacidad
               </a>
             </label>

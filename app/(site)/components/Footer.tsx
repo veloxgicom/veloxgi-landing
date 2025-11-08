@@ -1,11 +1,22 @@
 import Section from './Section'
 import Image from 'next/image'
+import Link from 'next/link'
+
+function getCurrentYear(): number {
+  return new Date().getFullYear()
+}
 
 export default function Footer() {
+
+ 
+
+  const currentYear = getCurrentYear()
+
+
   return (
     <footer className="mt-12 bg-dark text-slate-100 relative">
-      <div className="absolute inset-0 grid-bg-dark opacity-50" aria-hidden/>
-      <Section className="py-16 relative">
+      <div className="absolute inset-0 grid-bg-dark opacity-50 pointer-events-none" aria-hidden/>
+      <Section className="py-16 relative z-10">
         {/* Logo */}
         <div className="flex justify-center mb-12">
           <div className="relative w-64 h-20">
@@ -73,19 +84,25 @@ export default function Footer() {
       </Section>
 
       {/* Bottom Bar */}
-      <div className="border-t border-white/10">
+      <div className="border-t border-white/10 relative z-10">
         <Section className="py-6">
           <div className="flex flex-col sm:flex-row items-center justify-between gap-4 text-sm text-slate-400">
             <div className="text-center sm:text-left">
-              © 2024 Veloxgi. Todos los derechos reservados.
+              © {currentYear} Veloxgi. Todos los derechos reservados.
             </div>
             <div className="flex items-center gap-6">
-              <a href="#" className="hover:text-white hover:underline transition-colors">
+              <Link 
+                href="/terms" 
+                className="hover:text-white hover:underline transition-colors cursor-pointer relative z-10"
+              >
                 Términos y condiciones
-              </a>
-              <a href="#" className="hover:text-white hover:underline transition-colors">
+              </Link>
+              <Link 
+                href="/privacy" 
+                className="hover:text-white hover:underline transition-colors cursor-pointer relative z-10"
+              >
                 Política de privacidad
-              </a>
+              </Link>
             </div>
           </div>
         </Section>
