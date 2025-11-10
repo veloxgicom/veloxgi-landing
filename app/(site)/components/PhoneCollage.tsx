@@ -3,9 +3,9 @@ import Image from 'next/image'
 import { useState, useEffect } from 'react'
 
 const GALLERY_IMAGES = [
-  { src: '/img/banner-1.png', alt: 'Panel de control' },
-  { src: '/img/banner-2.png', alt: 'Dashboard principal' },
-  { src: '/img/banner-3.png', alt: 'Gestión de tiendas' },
+  { src: '/img/banner-1.webp', alt: 'Panel de control' },
+  { src: '/img/banner-2.webp', alt: 'Dashboard principal' },
+  { src: '/img/banner-3.webp', alt: 'Gestión de tiendas' },
 
 ]
 

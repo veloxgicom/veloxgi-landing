@@ -56,7 +56,7 @@ export default function Header() {
         >
           <div className="relative w-32 h-10">
             <Image 
-              src="/img/logo-primary.png" 
+              src="/img/logo-primary.webp" 
               alt="Veloxgi Logo" 
               fill 
               className="object-contain"
@@ -114,7 +114,7 @@ export default function Header() {
             <div className="flex items-center justify-between mb-4">
               <div className="relative w-28 h-8">
                 <Image 
-                  src="/img/logo-primary.png" 
+                  src="/img/logo-primary.webp" 
                   alt="Veloxgi Logo" 
                   fill 
                   className="object-contain"

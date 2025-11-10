@@ -30,7 +30,7 @@ export default function Hero() {
             {/* Imagen flotando por encima del fondo */}
             <div className="absolute -top-14 -left-4 sm:-top-8 sm:-left-6 md:-top-10 md:-left-8 lg:-top-[4.5rem] lg:-left-12 h-[380px] w-[280px] sm:h-[480px] sm:w-[360px] md:h-[540px] md:w-[420px] lg:h-[631px] lg:w-[590px] z-10 pointer-events-none">
               <Image
-                src="/img/hero.png"
+                src="/img/hero.webp"
                 alt={t('hero.imageAlt')}
                 fill
                 className="object-contain"

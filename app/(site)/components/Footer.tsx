@@ -21,7 +21,7 @@ export default function Footer() {
         <div className="flex justify-center mb-12">
           <div className="relative w-64 h-20">
             <Image 
-              src="/img/logo-segundarry.png" 
+              src="/img/logo-segundarry.webp" 
               alt="Veloxgi Logo" 
               fill 
               className="object-contain"

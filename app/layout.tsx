@@ -17,26 +17,31 @@ export const viewport: Viewport = {
 
 export const metadata: Metadata = {
   title: {
-    default: 'Veloxgi — Gestión de Logística para PyMEs | Centraliza tus Marketplaces',
+    default: 'Veloxgi — Logistics Management for SMEs | Centralize Your Marketplaces',
     template: '%s | Veloxgi'
   },
-  description: 'Veloxgi es la plataforma de gestión logística que centraliza pedidos y ventas de múltiples marketplaces, gestiona colaboradores y optimiza entregas. Ideal para pequeñas y medianas empresas.',
+  description: 'Veloxgi is the logistics management platform that centralizes orders and sales from multiple marketplaces, manages collaborators, and optimizes deliveries. Perfect for small and medium businesses.',
   keywords: [
+    'logistics management',
+    'SME logistics',
+    'order centralization',
+    'marketplace management',
+    'delivery optimization',
+    'delivery personnel management',
+    'inventory control',
+    'business logistics',
+    'fleet management',
+    'order tracking',
+    'logistics platform',
+    'logistics software',
+    'driver management',
+    'delivery coordination',
+    'marketplace integration',
     'gestión logística',
     'logística para PyMEs',
     'centralización de pedidos',
     'gestión de marketplaces',
     'optimización de entregas',
-    'gestión de repartidores',
-    'control de inventario',
-    'logística empresarial',
-    'gestión de flotas',
-    'rastreo de pedidos',
-    'plataforma logística',
-    'software de logística',
-    'gestión de conductores',
-    'coordinación de entregas',
-    'integración de marketplaces'
   ],
   authors: [{ name: 'Veloxgi' }],
   creator: 'Veloxgi',
@@ -58,25 +63,26 @@ export const metadata: Metadata = {
   },
   openGraph: {
     type: 'website',
-    locale: 'es_ES',
+    locale: 'en_US',
+    alternateLocale: ['es_ES'],
     url: 'https://veloxgi.com',
-    title: 'Veloxgi — Gestión de Logística para PyMEs',
-    description: 'Centraliza pedidos y ventas de múltiples marketplaces, gestiona colaboradores y optimiza entregas desde una sola plataforma.',
+    title: 'Veloxgi — Logistics Management for SMEs',
+    description: 'Centralize orders and sales from multiple marketplaces, manage collaborators, and optimize deliveries from a single platform.',
     siteName: 'Veloxgi',
     images: [
       {
-        url: '/img/hero.png',
+        url: '/img/hero.webp',
         width: 1200,
         height: 630,
-        alt: 'Veloxgi — Plataforma de gestión logística',
+        alt: 'Veloxgi — Logistics Management Platform',
       },
     ],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Veloxgi — Gestión de Logística para PyMEs',
-    description: 'Centraliza pedidos y ventas de múltiples marketplaces, gestiona colaboradores y optimiza entregas.',
-    images: ['/img/hero.png'],
+    title: 'Veloxgi — Logistics Management for SMEs',
+    description: 'Centralize orders and sales from multiple marketplaces, manage collaborators, and optimize deliveries.',
+    images: ['/img/hero.webp'],
     creator: '@veloxgi',
   },
   robots: {
@@ -100,12 +106,12 @@ export const metadata: Metadata = {
   classification: 'Business Software',
   icons: {
     icon: [
-      { url: '/favicon.png', type: 'image/png' },
+      { url: '/favicon.webp', type: 'image/webp' },
     ],
     apple: [
-      { url: '/favicon.png', type: 'image/png' },
+      { url: '/favicon.webp', type: 'image/webp' },
     ],
-    shortcut: '/favicon.png',
+    shortcut: '/favicon.webp',
   },
   appleWebApp: {
     capable: true,
@@ -123,16 +129,18 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
     '@type': 'Organization',
     name: 'Veloxgi',
     url: 'https://veloxgi.com',
-    logo: 'https://veloxgi.com/img/logo-primary.png',
-    description: 'Plataforma de gestión logística para pequeñas y medianas empresas',
-    contactPoint: {
-      '@type': 'ContactPoint',
-      telephone: '+57-322-785-8583',
-      contactType: 'customer service',
-      email: 'veloxgi.com@gmail.com',
-      areaServed: 'ES',
-      availableLanguage: 'Spanish',
-    },
+    logo: 'https://veloxgi.com/img/logo-primary.webp',
+    description: 'Logistics management platform for small and medium businesses',
+    contactPoint: [
+      {
+        '@type': 'ContactPoint',
+        telephone: '+57-322-785-8583',
+        contactType: 'customer service',
+        email: 'veloxgi.com@gmail.com',
+        areaServed: ['ES', 'US', 'EU'],
+        availableLanguage: ['English', 'Spanish'],
+      },
+    ],
     sameAs: [
       // Agregar redes sociales cuando estén disponibles
     ],

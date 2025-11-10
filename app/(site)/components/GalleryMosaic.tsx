@@ -152,7 +152,7 @@ export default function GalleryMosaic() {
             >
               <div className="relative w-full h-full group cursor-pointer">
                 <Image 
-                  src="/img/store.png" 
+                  src="/img/store.webp" 
                   alt={t('gallery.storeImageAlt')} 
                   fill 
                   className="rounded-xl object-cover transition-transform duration-500 ease-out group-hover:scale-110" 
@@ -170,7 +170,7 @@ export default function GalleryMosaic() {
             >
               <div className="relative w-full h-full group cursor-pointer">
                 <Image 
-                  src="/img/conductor.png" 
+                  src="/img/conductor.webp" 
                   alt={t('gallery.driverImageAlt')} 
                   fill 
                   className="rounded-xl object-cover transition-transform duration-500 ease-out group-hover:scale-110" 
@@ -191,7 +191,7 @@ export default function GalleryMosaic() {
           >
             <div className="relative w-full h-full group cursor-pointer">
               <Image 
-                src="/img/client.png" 
+                src="/img/client.webp" 
                 alt={t('gallery.clientImageAlt')} 
                 fill 
                 className="rounded-xl object-cover transition-transform duration-500 ease-out group-hover:scale-110" 

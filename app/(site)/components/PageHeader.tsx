@@ -15,7 +15,7 @@ export default function PageHeader() {
         <Link href="/" className="flex items-center gap-2" aria-label={t('commonPages.homePage')}>
           <div className="relative w-32 h-10">
             <Image 
-              src="/img/logo-primary.png" 
+              src="/img/logo-primary.webp" 
               alt="Veloxgi Logo" 
               fill 
               className="object-contain"

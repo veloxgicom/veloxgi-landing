@@ -14,7 +14,7 @@ export default function FeaturePanel() {
     <Section className="py-12">
       <div
         className="relative rounded-2xl p-8 md:p-10 lg:p-12 shadow-sm overflow-hidden"
-        style={{ backgroundImage: "url('/img/banner-patron.png')", backgroundSize: 'cover', backgroundPosition: 'center' }}
+        style={{ backgroundImage: "url('/img/banner-patron.webp')", backgroundSize: 'cover', backgroundPosition: 'center' }}
       >
         <div className="absolute inset-0" aria-hidden />
         <div className="relative z-10 grid lg:grid-cols-2 gap-10 items-start">
@@ -24,20 +24,16 @@ export default function FeaturePanel() {
           >
             <p className="text-6xl">{t('features.title')}</p>
             <p className="muted max-w-md">{t('features.description')}</p>
-            <a href="#" className="inline-flex items-center gap-2 text-brand font-medium link-underline">{t('features.viewAll')}
-              <span className="inline-flex items-center justify-center size-6 rounded-full bg-brand text-ink" aria-hidden>
-                <ArrowRight size={14}/>
-              </span>
-            </a>
+            
           </div>
           <div 
             ref={cardsRef.ref}
             className={`grid grid-cols-1 sm:grid-cols-2 gap-5 transition-all duration-1000 ${cardsRef.animationClasses}`}
           >
-            <FeatureCard title={t('features.marketplaceIntegration')} imageSrc="/img/marketplace.png"/>
-            <FeatureCard title={t('features.unifiedPanel')} imageSrc="/img/panel.png"/>
-            <FeatureCard title={t('features.deliveryTracking')} imageSrc="/img/truck.png"/>
-            <FeatureCard title={t('features.roleControl')} imageSrc="/img/order.png"/>
+            <FeatureCard title={t('features.marketplaceIntegration')} imageSrc="/img/marketplace.webp"/>
+            <FeatureCard title={t('features.unifiedPanel')} imageSrc="/img/panel.webp"/>
+            <FeatureCard title={t('features.deliveryTracking')} imageSrc="/img/truck.webp"/>
+            <FeatureCard title={t('features.roleControl')} imageSrc="/img/order.webp"/>
           </div>
         </div>
       </div>
