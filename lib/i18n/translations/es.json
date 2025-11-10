@@ -1,0 +1,392 @@
+{
+  "common": {
+    "skipToContent": "Saltar al contenido principal",
+    "loading": "Cargando...",
+    "error": "Error",
+    "success": "Éxito",
+    "close": "Cerrar",
+    "menu": "Menu",
+    "openMenu": "Abrir menu",
+    "closeMenu": "Cerrar menu"
+  },
+  "nav": {
+    "home": "Inicio",
+    "features": "Características",
+    "advantages": "Ventajas",
+    "contact": "Contacto",
+    "joinWaitlist": "Únete a la lista",
+    "homePage": "Página inicial"
+  },
+  "hero": {
+    "title": "Gestiona toda tu logística desde un solo lugar",
+    "description": "La herramienta para pequeñas y medianas empresas que centraliza pedidos y ventas de múltiples plataformas, gestiona colaboradores (conductores, repartidores y administrativos) y optimiza cada entrega.",
+    "cta": "Unirme a la lista de espera",
+    "imageAlt": "Cliente feliz con Veloxgi"
+  },
+  "waitlist": {
+    "title": "Únete a la lista de espera",
+    "description": "Obtén acceso anticipado a nuestro lanzamiento. Únete a la lista de espera.",
+    "emailLabel": "Dirección de correo electrónico",
+    "emailPlaceholder": "Introduce tu correo electrónico",
+    "privacyAgree": "Estoy de acuerdo con la",
+    "privacyPolicy": "política de privacidad",
+    "submit": "Únete a la lista de espera",
+    "processing": "Procesando...",
+    "success": "¡Te has unido exitosamente a la lista de espera!",
+    "error": "Hubo un error al unirte a la lista. Inténtalo de nuevo.",
+    "connectionError": "Hubo un error de conexión. Inténtalo de nuevo.",
+    "requiredFields": "Por favor, completa todos los campos requeridos.",
+    "comingSoon": "¡Pronto nos lanzaremos! Sigue nuestra",
+    "prelaunchPage": "página de prelanzamiento",
+    "forNotifications": "para recibir notificaciones.",
+    "closeModal": "Cerrar modal"
+  },
+  "footer": {
+    "aboutUs": "Sobre nosotros",
+    "aboutDescription": "Veloxgi — Centraliza la gestión de todos tus marketplaces en un solo lugar. Optimiza tus ventas, controla tu inventario y haz crecer tu negocio con la velocidad y eficiencia que necesitas.",
+    "links": "Enlaces",
+    "contact": "Contacto",
+    "rightsReserved": "Todos los derechos reservados.",
+    "terms": "Términos y condiciones",
+    "privacy": "Política de privacidad"
+  },
+  "sections": {
+    "home": "Sección de inicio",
+    "features": "Características de la plataforma",
+    "advantages": "Ventajas de Veloxgi",
+    "waitlist": "Únete a la lista de espera",
+    "contact": "Información de contacto"
+  },
+  "language": {
+    "switch": "Cambiar idioma",
+    "english": "English",
+    "spanish": "Español"
+  },
+  "features": {
+    "title": "Todo lo que tu PyME necesita para crecer",
+    "description": "Centraliza ventas, pedidos y entregas, coordina a tu equipo y gana visibilidad en una sola plataforma.",
+    "viewAll": "Ver todas las funcionalidades",
+    "marketplaceIntegration": "Integración con múltiples marketplaces",
+    "unifiedPanel": "Panel único de pedidos y ventas",
+    "deliveryTracking": "Asignación y seguimiento de repartos",
+    "roleControl": "Control de roles y colaboradores"
+  },
+  "promo": {
+    "text": "Conecta tus tiendas, marketplaces y flotas. Centraliza tu operación en minutos y reduce errores."
+  },
+  "darkCta": {
+    "title": "Empieza hoy: opera más rápido y con menos errores",
+    "description": "Únete a la lista de espera y sé de los primeros en simplificar tu logística, integrar canales y coordinar a tu equipo desde un solo panel.",
+    "cta": "Unirme a la lista de espera"
+  },
+  "gallery": {
+    "clients": "Clientes",
+    "companies": "Empresas",
+    "collaborators": "Colaboradores",
+    "clientsAdvantage1": "Los clientes pueden rastrear sus pedidos desde que se realiza hasta la entrega, con actualizaciones en tiempo real del estado y ubicación de su paquete.",
+    "companiesAdvantage1": "Gestiona pedidos de múltiples marketplaces desde un solo panel, reduciendo errores y tiempo de procesamiento. Visualiza todas tus ventas y entregas en un lugar.",
+    "companiesAdvantage2": "Asigna repartos de forma inteligente, optimiza rutas y reduce costos operativos. Gana visibilidad completa de tu logística y mejora la eficiencia.",
+    "collaboratorsAdvantage1": "Los colaboradores acceden a una app móvil sencilla para gestionar entregas, recibir asignaciones automáticas y actualizar estados. Todo desde su dispositivo.",
+    "storeImageAlt": "Tienda",
+    "driverImageAlt": "Cliente",
+    "clientImageAlt": "Conductor"
+  },
+  "commonPages": {
+    "backToHome": "Volver al inicio",
+    "viewTerms": "Ver Términos y Condiciones",
+    "viewPrivacy": "Ver Política de Privacidad",
+    "lastUpdated": "Última actualización",
+    "homePage": "Página inicial"
+  },
+  "terms": {
+    "title": "Términos y Condiciones",
+    "lastUpdated": "Última actualización",
+    "intro": "Bienvenido a Veloxgi (\"Servicio\"), operado por Veloxgi (\"Compañía\", \"nosotros\", \"nos\" o \"nuestro\"). Al acceder o usar nuestro Servicio, aceptas estos Términos y Condiciones (\"Términos\"). Si no estás de acuerdo, no uses el Servicio.",
+    "section1": {
+      "title": "1. Uso del Servicio",
+      "eligibility": {
+        "title": "1.1. Elegibilidad",
+        "content": "Debes tener al menos 18 años de edad y tener capacidad legal para celebrar contratos para usar nuestro Servicio."
+      },
+      "license": {
+        "title": "1.2. Licencia",
+        "content": "Te concedemos una licencia limitada, no exclusiva, no transferible y revocable para usar nuestro Servicio para su propósito previsto."
+      },
+      "prohibited": {
+        "title": "1.3. Actividades Prohibidas",
+        "intro": "No puedes:",
+        "item1": "Usar el Servicio para fines ilegales.",
+        "item2": "Intentar realizar ingeniería inversa, copiar o modificar nuestro software.",
+        "item3": "Interferir o interrumpir el Servicio.",
+        "item4": "Usar el Servicio para acosar o dañar a individuos.",
+        "item5": "Acceder no autorizado a sistemas o datos del Servicio.",
+        "item6": "Usar robots, spiders o herramientas automatizadas para acceder al Servicio sin autorización."
+      }
+    },
+    "section2": {
+      "title": "2. Lista de Espera y Recopilación de Datos",
+      "waitlist": {
+        "title": "2.1. Registro en la Lista de Espera",
+        "content": "Al unirte a la lista de espera, proporcionas tu dirección de correo electrónico y consientes en recibir actualizaciones sobre el Servicio, incluyendo notificaciones de lanzamiento, características nuevas y comunicaciones relacionadas con Veloxgi."
+      },
+      "dataUse": {
+        "title": "2.2. Uso de Datos",
+        "content": "Recopilamos y almacenamos tu correo electrónico con fines de notificación. No vendemos ni compartimos tu correo electrónico con terceros sin tu consentimiento, excepto según se describe en nuestra Política de Privacidad."
+      },
+      "optOut": {
+        "title": "2.3. Opt-Out",
+        "content": "Puedes cancelar tu suscripción en cualquier momento haciendo clic en el enlace \"cancelar suscripción\" en nuestros correos electrónicos o contactándonos directamente en"
+      }
+    },
+    "section3": {
+      "title": "3. Propiedad Intelectual",
+      "ownership": {
+        "title": "3.1. Propiedad",
+        "content": "Todos los derechos, títulos e intereses en el Servicio, incluyendo marcas comerciales, contenido y software, permanecen con nosotros. El Servicio y su contenido original, características y funcionalidad son propiedad de Veloxgi y están protegidos por leyes internacionales de derechos de autor, marcas comerciales, patentes, secretos comerciales y otras leyes de propiedad intelectual."
+      },
+      "restrictions": {
+        "title": "3.2. Restricciones",
+        "content": "No puedes usar nuestra marca, logos u otros materiales propietarios sin permiso escrito. Esto incluye, pero no se limita a, el nombre \"Veloxgi\", nuestro logo y cualquier otro elemento de identificación visual."
+      }
+    },
+    "section4": {
+      "title": "4. Descargos de Responsabilidad y Limitación de Responsabilidad",
+      "warranty": {
+        "title": "4.1. Sin Garantía",
+        "content": "El Servicio se proporciona \"tal cual\" sin garantías de ningún tipo, expresas o implícitas. No garantizamos que el Servicio será ininterrumpido, oportuno, seguro o libre de errores."
+      },
+      "liability": {
+        "title": "4.2. Limitación de Responsabilidad",
+        "content": "En la máxima medida permitida por la ley, no seremos responsables de ningún daño indirecto, incidental, especial, consecuente o punitivo, incluyendo pérdida de beneficios, datos, uso, buena voluntad u otras pérdidas intangibles, resultantes de tu uso del Servicio."
+      }
+    },
+    "section5": {
+      "title": "5. Terminación",
+      "breach": {
+        "title": "5.1. Incumplimiento",
+        "content": "Nos reservamos el derecho de terminar o suspender tu acceso al Servicio inmediatamente, sin previo aviso o responsabilidad, por cualquier motivo, incluyendo si violas estos Términos."
+      },
+      "effect": {
+        "title": "5.2. Efecto de la Terminación",
+        "content": "Al terminar, tu derecho a usar el Servicio cesa inmediatamente. Todas las disposiciones de estos Términos que por su naturaleza deberían sobrevivir a la terminación sobrevivirán, incluyendo disposiciones de propiedad, descargos de responsabilidad y limitación de responsabilidad."
+      }
+    },
+    "section6": {
+      "title": "6. Cambios a Estos Términos",
+      "content": "Podemos actualizar estos Términos en cualquier momento. Te notificaremos de cualquier cambio publicando los nuevos Términos en esta página y actualizando la fecha de \"Última actualización\". El uso continuado del Servicio después de los cambios constituye la aceptación de los nuevos Términos."
+    },
+    "section7": {
+      "title": "7. Ley Aplicable y Disputas",
+      "law": {
+        "title": "7.1. Ley Aplicable",
+        "content": "Estos Términos se rigen por la ley española."
+      },
+      "consumerRights": {
+        "title": "7.2. Derechos del Consumidor",
+        "content": "Nada en estos Términos afecta tus derechos legales como consumidor bajo la ley española y de la UE, incluyendo derechos bajo el Real Decreto Legislativo 1/2007 (Ley General para la Defensa de los Consumidores y Usuarios)."
+      },
+      "disputes": {
+        "title": "7.3. Resolución de Disputas",
+        "content": "Para cualquier disputa, puedes contactarnos en",
+        "ifNot": "Si no podemos resolver la disputa de manera amistosa:",
+        "item1": "Los consumidores españoles tienen el derecho de usar las juntas arbitrales de consumo (Juntas Arbitrales de Consumo)",
+        "item2": "También puedes usar la plataforma de resolución de disputas en línea de la UE:",
+        "item3": "Las disputas estarán sujetas a la jurisdicción de los tribunales españoles"
+      },
+      "language": {
+        "title": "7.4. Idioma",
+        "content": "En caso de conflicto entre versiones de idioma, la versión en español prevalecerá."
+      }
+    },
+    "section8": {
+      "title": "8. Derecho de Desistimiento",
+      "consumers": {
+        "title": "8.1. Para Consumidores",
+        "content": "Como consumidor de la UE, tienes el derecho de desistir de este acuerdo dentro de 14 días sin dar ninguna razón, de acuerdo con la ley de protección al consumidor española."
+      },
+      "waiver": {
+        "title": "8.2. Renuncia para Servicio Inmediato",
+        "content": "Al unirte a nuestra lista de espera y consentir en recibir comunicaciones inmediatas, renuncias expresamente a tu derecho de desistimiento para la prestación de servicios que comienzan inmediatamente a tu solicitud."
+      },
+      "howTo": {
+        "title": "8.3. Cómo Ejercer",
+        "content": "Para ejercer tu derecho de desistimiento, contáctanos en",
+        "with": "con una declaración clara de tu decisión."
+      }
+    },
+    "section9": {
+      "title": "9. Servicio de Veloxgi",
+      "description": {
+        "title": "9.1. Descripción del Servicio",
+        "content": "Veloxgi es una plataforma diseñada para pequeñas y medianas empresas que centraliza la gestión de pedidos y ventas de múltiples marketplaces desde un solo lugar. El Servicio permite gestionar colaboradores (conductores, repartidores y administrativos), optimizar entregas y tener visibilidad completa de la logística empresarial."
+      },
+      "availability": {
+        "title": "9.2. Disponibilidad del Servicio",
+        "content": "Actualmente, Veloxgi está en fase de desarrollo y disponemos de una lista de espera. Te notificaremos cuando el Servicio esté disponible para tu uso. No garantizamos fechas específicas de lanzamiento."
+      },
+      "changes": {
+        "title": "9.3. Cambios al Servicio",
+        "content": "Nos reservamos el derecho de modificar, suspender o discontinuar cualquier aspecto del Servicio en cualquier momento, con o sin previo aviso."
+      }
+    },
+    "section10": {
+      "title": "10. Información de Contacto",
+      "content": "Para preguntas sobre estos Términos, contáctanos en:"
+    },
+    "contact": {
+      "email": "Email",
+      "phone": "Teléfono"
+    }
+  },
+  "privacy": {
+    "title": "Política de Privacidad",
+    "lastUpdated": "Última actualización",
+    "intro": "Veloxgi (\"nosotros\", \"nos\" o \"nuestro\") se compromete a proteger tu privacidad. Esta Política de Privacidad explica cómo recopilamos, usamos y compartimos información sobre ti cuando utilizas nuestro Servicio.",
+    "section1": {
+      "title": "1. Información que Recopilamos",
+      "personal": {
+        "title": "1.1. Información Personal",
+        "content": "Cuando te unes a nuestra lista de espera, recopilamos tu dirección de correo electrónico con tu consentimiento explícito."
+      },
+      "usage": {
+        "title": "1.2. Datos de Uso",
+        "content": "Podemos recopilar información sobre cómo interactúas con nuestro Servicio, incluyendo dirección IP, tipo de navegador y patrones de uso."
+      },
+      "cookies": {
+        "title": "1.3. Cookies y Tecnologías de Seguimiento",
+        "content": "Utilizamos cookies para mejorar nuestro Servicio y analizar el tráfico. Puedes gestionar las preferencias de cookies a través de la configuración de tu navegador."
+      }
+    },
+    "section2": {
+      "title": "2. Base Legal para el Procesamiento de Datos",
+      "intro": "Procesamos tus datos personales bajo las siguientes bases legales:",
+      "consent": {
+        "title": "Consentimiento",
+        "content": "Cuando proporcionas voluntariamente tu correo electrónico para unirte a nuestra lista de espera."
+      },
+      "legitimate": {
+        "title": "Interés Legítimo",
+        "content": "Para mejorar nuestro Servicio y comunicar actualizaciones relevantes."
+      },
+      "contractual": {
+        "title": "Obligación Contractual",
+        "content": "Cuando los datos son necesarios para proporcionar el Servicio."
+      }
+    },
+    "section3": {
+      "title": "3. Cómo Usamos Tu Información",
+      "operation": {
+        "title": "3.1. Operación del Servicio",
+        "content": "Utilizamos tu correo electrónico para notificarte sobre actualizaciones, lanzamientos de producto y comunicaciones relacionadas con Veloxgi."
+      },
+      "improvements": {
+        "title": "3.2. Mejoras",
+        "content": "Analizamos los datos de uso para mejorar nuestro Servicio y ofrecer una mejor experiencia a nuestros usuarios."
+      },
+      "compliance": {
+        "title": "3.3. Cumplimiento Legal",
+        "content": "Podemos usar o divulgar tu información si es requerido por ley o para proteger nuestros derechos legales."
+      }
+    },
+    "section4": {
+      "title": "4. Compartir Información",
+      "thirdParty": {
+        "title": "4.1. Proveedores de Servicios de Terceros",
+        "content": "Podemos compartir datos con proveedores de servicios que nos ayudan en la entrega de correos electrónicos, análisis e infraestructura. Todos los terceros están obligados a cumplir con el GDPR y han firmado Acuerdos de Procesamiento de Datos (DPAs) con nosotros."
+      },
+      "legal": {
+        "title": "4.2. Obligaciones Legales",
+        "content": "Podemos divulgar información si es necesario para cumplir con requisitos legales o proteger nuestros derechos."
+      },
+      "transfers": {
+        "title": "4.3. Transferencias Comerciales",
+        "content": "En el evento de una fusión, adquisición o venta de activos, los datos de usuario pueden ser transferidos."
+      }
+    },
+    "section5": {
+      "title": "5. Derechos del Usuario bajo el GDPR",
+      "intro": "Bajo el Reglamento General de Protección de Datos (GDPR), los usuarios tienen los siguientes derechos:",
+      "access": {
+        "title": "Derecho de Acceso",
+        "content": "Solicitar una copia de los datos que tenemos sobre ti."
+      },
+      "rectification": {
+        "title": "Derecho de Rectificación",
+        "content": "Solicitar la corrección de datos personales inexactos."
+      },
+      "deletion": {
+        "title": "Derecho de Supresión",
+        "content": "Solicitar la eliminación de tus datos (\"Derecho al Olvido\")."
+      },
+      "restriction": {
+        "title": "Derecho a Restringir el Procesamiento",
+        "content": "Solicitar limitar cómo procesamos tus datos."
+      },
+      "portability": {
+        "title": "Derecho a la Portabilidad de Datos",
+        "content": "Recibir una copia de tus datos en un formato estructurado."
+      },
+      "objection": {
+        "title": "Derecho de Oposición",
+        "content": "Oponerte al procesamiento de datos basado en intereses legítimos."
+      },
+      "withdraw": {
+        "title": "Derecho a Retirar el Consentimiento",
+        "content": "Retirar el consentimiento previamente dado en cualquier momento."
+      },
+      "contact": "Para ejercer estos derechos, contáctanos en:"
+    },
+    "section6": {
+      "title": "6. Seguridad y Retención de Datos",
+      "security": {
+        "title": "6.1. Medidas de Seguridad",
+        "content": "Implementamos medidas de seguridad técnicas y organizativas para proteger tus datos. Sin embargo, ningún método de transmisión por internet es 100% seguro."
+      },
+      "retention": {
+        "title": "6.2. Retención de Datos",
+        "content": "Conservamos tus datos personales solo el tiempo necesario para cumplir con su propósito previsto, a menos que un período de retención más largo sea requerido por ley. Puedes solicitar la eliminación de tus datos en cualquier momento."
+      }
+    },
+    "section7": {
+      "title": "7. Transferencias Internacionales de Datos",
+      "content": "Si transferimos tus datos fuera del Espacio Económico Europeo (EEE), implementamos salvaguardias apropiadas, como Cláusulas Contractuales Estándar (SCCs), para proteger tus datos personales."
+    },
+    "section8": {
+      "title": "8. Cookies y Tecnologías de Seguimiento",
+      "types": {
+        "title": "8.1. Tipos de Cookies que Usamos",
+        "necessary": "Cookies Estrictamente Necesarias:",
+        "necessaryDesc": "Esenciales para que el Servicio funcione",
+        "analytical": "Cookies Analíticas:",
+        "analyticalDesc": "Nos ayudan a entender cómo los usuarios interactúan con nuestro Servicio",
+        "functional": "Cookies Funcionales:",
+        "functionalDesc": "Recuerdan tus preferencias"
+      },
+      "consent": {
+        "title": "8.2. Consentimiento de Cookies",
+        "content": "Por ley (LSSI), requerimos tu consentimiento explícito para cookies no esenciales. Puedes gestionar tus preferencias a través de nuestro banner de cookies cuando visitas nuestro Servicio por primera vez."
+      },
+      "manage": {
+        "title": "8.3. Gestionar Cookies",
+        "content": "Puedes gestionar o desactivar las cookies a través de la configuración de tu navegador. Sin embargo, desactivar ciertas cookies puede afectar la funcionalidad del Servicio."
+      }
+    },
+    "section9": {
+      "title": "9. Privacidad de Menores",
+      "content": "Nuestro Servicio no está destinado a menores de 16 años (o menores de 13 años en Estados Unidos). No recopilamos conscientemente datos personales de menores bajo estos límites de edad. Si nos damos cuenta de que hemos recopilado datos personales de un menor bajo estas edades, tomaremos medidas para eliminar dicha información de inmediato. Si crees que hemos recopilado información de un menor bajo el límite de edad aplicable, por favor contáctanos inmediatamente."
+    },
+    "section10": {
+      "title": "10. Cambios a esta Política de Privacidad",
+      "content": "Podemos actualizar esta Política de Privacidad de vez en cuando. El uso continuado del Servicio después de los cambios constituye la aceptación de la nueva política."
+    },
+    "section11": {
+      "title": "11. Información de Contacto y Solicitudes de Protección de Datos",
+      "content": "Para preguntas sobre esta Política de Privacidad o solicitudes relacionadas con GDPR, contáctanos en:"
+    },
+    "contact": {
+      "email": "Email",
+      "phone": "Teléfono"
+    }
+  }
+}
+

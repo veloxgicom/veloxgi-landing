@@ -1,40 +1,38 @@
 "use client"
 import Image from 'next/image'
 import Section from './Section'
-import { useState } from 'react'
+import { useState, useMemo } from 'react'
 import { useScrollAnimation } from './useScrollAnimation'
-
-const ADVANTAGES = {
-  clientes: [
-    {
-      title: "Seguimiento en tiempo real",
-      description: "Los clientes pueden rastrear sus pedidos desde que se realiza hasta la entrega, con actualizaciones en tiempo real del estado y ubicación de su paquete."
-    }
-  ],
-  empresas: [
-    {
-      title: "Centralización de operaciones",
-      description: "Gestiona pedidos de múltiples marketplaces desde un solo panel, reduciendo errores y tiempo de procesamiento. Visualiza todas tus ventas y entregas en un lugar."
-    },
-    {
-      title: "Optimización de rutas y costos",
-      description: "Asigna repartos de forma inteligente, optimiza rutas y reduce costos operativos. Gana visibilidad completa de tu logística y mejora la eficiencia."
-    }
-  ],
-  colaboradores: [
-    {
-      title: "Herramientas para conductores y repartidores",
-      description: "Los colaboradores acceden a una app móvil sencilla para gestionar entregas, recibir asignaciones automáticas y actualizar estados. Todo desde su dispositivo."
-    }
-  ]
-}
+import { useLanguage } from '@/lib/i18n/context/LanguageProvider'
 
 export default function GalleryMosaic() {
+  const { t } = useLanguage()
   const [openSection, setOpenSection] = useState<string | null>('clientes')
   const textRef = useScrollAnimation<HTMLDivElement>({ direction: 'left', delay: 0 })
   const image1Ref = useScrollAnimation<HTMLDivElement>({ direction: 'up', delay: 0 })
   const image2Ref = useScrollAnimation<HTMLDivElement>({ direction: 'up', delay: 150 })
   const image3Ref = useScrollAnimation<HTMLDivElement>({ direction: 'up', delay: 300 })
+
+  const ADVANTAGES = useMemo(() => ({
+    clientes: [
+      {
+        description: t('gallery.clientsAdvantage1')
+      }
+    ],
+    empresas: [
+      {
+        description: t('gallery.companiesAdvantage1')
+      },
+      {
+        description: t('gallery.companiesAdvantage2')
+      }
+    ],
+    colaboradores: [
+      {
+        description: t('gallery.collaboratorsAdvantage1')
+      }
+    ]
+  }), [t])
 
   const toggleSection = (section: string) => {
     setOpenSection(openSection === section ? null : section)
@@ -59,7 +57,7 @@ export default function GalleryMosaic() {
               className="w-full flex items-center justify-between text-left"
               aria-expanded={openSection === 'clientes'}
             >
-              <h3 className={`font-bold text-lg text-ink text-[40px] ${openSection === 'clientes' ? 'text-ink' : 'text-muted'}`}>Clientes</h3>
+              <h3 className={`font-bold text-lg text-ink text-[40px] ${openSection === 'clientes' ? 'text-ink' : 'text-muted'}`}>{t('gallery.clients')}</h3>
               {openSection === 'clientes' ? (
                 <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
@@ -74,7 +72,6 @@ export default function GalleryMosaic() {
               <div className="mt-3 space-y-3">
                 {ADVANTAGES.clientes.map((item, idx) => (
                   <div key={idx} className="space-y-2">
-                    {/* <p className="font-medium text-[22px] text-ink">{item.title}</p> */}
                     <p className="text-lg text-muted leading-relaxed">{item.description}</p>
                   </div>
                 ))}
@@ -89,7 +86,7 @@ export default function GalleryMosaic() {
               className="w-full flex items-center justify-between text-left"
               aria-expanded={openSection === 'empresas'}
             >
-              <h3 className={`font-bold text-lg text-ink text-[40px] ${openSection === 'empresas' ? 'text-ink' : 'text-muted'}`}>Empresas</h3>
+              <h3 className={`font-bold text-lg text-ink text-[40px] ${openSection === 'empresas' ? 'text-ink' : 'text-muted'}`}>{t('gallery.companies')}</h3>
               {openSection === 'empresas' ? (
                 <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
@@ -104,7 +101,6 @@ export default function GalleryMosaic() {
               <div className="mt-3 space-y-4">
                 {ADVANTAGES.empresas.map((item, idx) => (
                   <div key={idx} className="space-y-2">
-                    {/* <p className="font-medium text-sm text-ink">{item.title}</p> */}
                     <p className="text-lg text-muted leading-relaxed">{item.description}</p>
                   </div>
                 ))}
@@ -119,7 +115,7 @@ export default function GalleryMosaic() {
               className="w-full flex items-center justify-between text-left"
               aria-expanded={openSection === 'colaboradores'}
             >
-              <h3 className={`font-bold text-lg text-ink text-[40px] ${openSection === 'colaboradores' ? 'text-ink' : 'text-muted'}`}>Colaboradores</h3>
+              <h3 className={`font-bold text-lg text-ink text-[40px] ${openSection === 'colaboradores' ? 'text-ink' : 'text-muted'}`}>{t('gallery.collaborators')}</h3>
               {openSection === 'colaboradores' ? (
                 <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
@@ -134,7 +130,6 @@ export default function GalleryMosaic() {
               <div className="mt-3 space-y-3">
                 {ADVANTAGES.colaboradores.map((item, idx) => (
                   <div key={idx} className="space-y-2">
-                    {/* <p className="font-medium text-sm text-ink">{item.title}</p> */}
                     <p className="text-lg text-muted leading-relaxed">{item.description}</p>
                   </div>
                 ))}
@@ -158,7 +153,7 @@ export default function GalleryMosaic() {
               <div className="relative w-full h-full group cursor-pointer">
                 <Image 
                   src="/img/store.png" 
-                  alt="Tienda" 
+                  alt={t('gallery.storeImageAlt')} 
                   fill 
                   className="rounded-xl object-cover transition-transform duration-500 ease-out group-hover:scale-110" 
                 />
@@ -176,7 +171,7 @@ export default function GalleryMosaic() {
               <div className="relative w-full h-full group cursor-pointer">
                 <Image 
                   src="/img/conductor.png" 
-                  alt="Cliente" 
+                  alt={t('gallery.driverImageAlt')} 
                   fill 
                   className="rounded-xl object-cover transition-transform duration-500 ease-out group-hover:scale-110" 
                 />
@@ -197,7 +192,7 @@ export default function GalleryMosaic() {
             <div className="relative w-full h-full group cursor-pointer">
               <Image 
                 src="/img/client.png" 
-                alt="Conductor" 
+                alt={t('gallery.clientImageAlt')} 
                 fill 
                 className="rounded-xl object-cover transition-transform duration-500 ease-out group-hover:scale-110" 
               />

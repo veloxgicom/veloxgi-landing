@@ -2,6 +2,9 @@ import type { Metadata, Viewport } from 'next'
 import { Inter } from 'next/font/google'
 import './globals.css'
 import GoogleAnalytics from './(site)/components/GoogleAnalytics'
+import { LanguageProvider } from '@/lib/i18n/context/LanguageProvider'
+import ClientLang from './(site)/components/ClientLang'
+import SkipToContent from './(site)/components/SkipToContent'
 
 const inter = Inter({ subsets: ['latin'], variable: '--font-inter' })
 
@@ -47,8 +50,10 @@ export const metadata: Metadata = {
   alternates: {
     canonical: '/',
     languages: {
-      'es-ES': '/es',
-      'es-MX': '/es',
+      'es': '/',
+      'en': '/',
+      'es-ES': '/',
+      'en-US': '/',
     },
   },
   openGraph: {
@@ -134,17 +139,18 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   }
 
   return (
-    <html lang="es" className={inter.variable}>
+    <html lang="es" className={inter.variable} suppressHydrationWarning>
       <body className="font-sans">
-        <GoogleAnalytics />
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
-        />
-        <a href="#main" className="sr-only focus:not-sr-only focus:fixed focus:z-50 focus:top-2 focus:left-2 bg-brand text-white px-3 py-2 rounded-lg shadow-card font-medium">
-          Saltar al contenido principal
-        </a>
-        {children}
+        <LanguageProvider>
+          <ClientLang />
+          <GoogleAnalytics />
+          <script
+            type="application/ld+json"
+            dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+          />
+          <SkipToContent />
+          {children}
+        </LanguageProvider>
       </body>
     </html>
   )

@@ -1,15 +1,15 @@
+'use client'
 import Section from './Section'
 import Image from 'next/image'
 import Link from 'next/link'
+import { useLanguage } from '@/lib/i18n/context/LanguageProvider'
 
 function getCurrentYear(): number {
   return new Date().getFullYear()
 }
 
 export default function Footer() {
-
- 
-
+  const { t } = useLanguage()
   const currentYear = getCurrentYear()
 
 
@@ -33,34 +33,34 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-12 mb-12">
           {/* Sobre nosotros */}
           <div className="space-y-4">
-            <h5 className="font-semibold text-lg mb-4 text-white">Sobre nosotros</h5>
+            <h5 className="font-semibold text-lg mb-4 text-white">{t('footer.aboutUs')}</h5>
             <p className="text-slate-300 text-sm leading-relaxed max-w-sm">
-              Veloxgi — Centraliza la gestión de todos tus marketplaces en un solo lugar. Optimiza tus ventas, controla tu inventario y haz crecer tu negocio con la velocidad y eficiencia que necesitas.
+              {t('footer.aboutDescription')}
             </p>
           </div>
 
           {/* Enlaces */}
           <div className="space-y-4">
-            <h5 className="font-semibold text-lg mb-4 text-white">Enlaces</h5>
+            <h5 className="font-semibold text-lg mb-4 text-white">{t('footer.links')}</h5>
             <ul className="space-y-3 text-slate-300 text-sm">
               <li>
-                <a href="#" className="hover:text-white hover:underline transition-colors">Inicio</a>
+                <a href="#inicio" className="hover:text-white hover:underline transition-colors">{t('nav.home')}</a>
               </li>
               <li>
-                <a href="#" className="hover:text-white hover:underline transition-colors">Características</a>
+                <a href="#caracteristicas" className="hover:text-white hover:underline transition-colors">{t('nav.features')}</a>
               </li>
               <li>
-                <a href="#" className="hover:text-white hover:underline transition-colors">Beneficios</a>
+                <a href="#ventajas" className="hover:text-white hover:underline transition-colors">{t('nav.advantages')}</a>
               </li>
               <li>
-                <a href="#" className="hover:text-white hover:underline transition-colors">Contacto</a>
+                <a href="#contacto" className="hover:text-white hover:underline transition-colors">{t('nav.contact')}</a>
               </li>
             </ul>
           </div>
 
           {/* Contacto */}
           <div className="space-y-4">
-            <h5 className="font-semibold text-lg mb-4 text-white">Contacto</h5>
+            <h5 className="font-semibold text-lg mb-4 text-white">{t('footer.contact')}</h5>
             <div className="space-y-3 text-slate-300 text-sm">
               <div className="flex items-start gap-3">
                 <svg className="w-5 h-5 mt-0.5 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -88,20 +88,20 @@ export default function Footer() {
         <Section className="py-6">
           <div className="flex flex-col sm:flex-row items-center justify-between gap-4 text-sm text-slate-400">
             <div className="text-center sm:text-left">
-              © {currentYear} Veloxgi. Todos los derechos reservados.
+              © {currentYear} Veloxgi. {t('footer.rightsReserved')}
             </div>
             <div className="flex items-center gap-6">
               <Link 
                 href="/terms" 
                 className="hover:text-white hover:underline transition-colors cursor-pointer relative z-10"
               >
-                Términos y condiciones
+                {t('footer.terms')}
               </Link>
               <Link 
                 href="/privacy" 
                 className="hover:text-white hover:underline transition-colors cursor-pointer relative z-10"
               >
-                Política de privacidad
+                {t('footer.privacy')}
               </Link>
             </div>
           </div>

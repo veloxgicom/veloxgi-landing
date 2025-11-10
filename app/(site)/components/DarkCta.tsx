@@ -4,9 +4,11 @@ import GridBgDark from './GridBgDark'
 import PhoneCollage from './PhoneCollage'
 import { useWaitlist } from './WaitlistProvider'
 import { useScrollAnimation } from './useScrollAnimation'
+import { useLanguage } from '@/lib/i18n/context/LanguageProvider'
 
 export default function DarkCta() {
   const { openModal } = useWaitlist()
+  const { t } = useLanguage()
   const textRef = useScrollAnimation<HTMLDivElement>({ direction: 'right', delay: 0 })
   const collageRef = useScrollAnimation<HTMLDivElement>({ direction: 'left', delay: 200 })
 
@@ -22,16 +24,16 @@ export default function DarkCta() {
             className={`space-y-5 relative z-10 order-1 lg:order-2 transition-all duration-1000 ${textRef.animationClasses}`}
           >
             <h2 className="h2 text-white">
-              Empieza hoy: opera más rápido y con menos errores
+              {t('darkCta.title')}
             </h2>
             <p className="text-slate-300 max-w-md">
-              Únete a la lista de espera y sé de los primeros en simplificar tu logística, integrar canales y coordinar a tu equipo desde un solo panel.
+              {t('darkCta.description')}
             </p>
             <button
               onClick={openModal}
               className="group inline-flex items-center justify-between gap-3 bg-brand text-ink font-semibold px-6 py-3 rounded-full transition-transform focus-brand hover:bg-brand600"
             >
-              <span>Unirme a la lista de espera</span>
+              <span>{t('darkCta.cta')}</span>
               <span aria-hidden className="relative inline-flex items-center justify-center size-8 rounded-full bg-white/90 text-ink transition-transform group-hover:translate-x-0.5 group-hover:scale-105">
                 <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
                   <path d="M5 12h12M13 6l6 6-6 6" strokeLinecap="round"/>

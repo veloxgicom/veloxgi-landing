@@ -13,6 +13,9 @@ export default function sitemap(): MetadataRoute.Sitemap {
       alternates: {
         languages: {
           es: baseUrl,
+          en: baseUrl,
+          'es-ES': baseUrl,
+          'en-US': baseUrl,
         },
       },
     },
@@ -24,6 +27,9 @@ export default function sitemap(): MetadataRoute.Sitemap {
       alternates: {
         languages: {
           es: `${baseUrl}/privacy`,
+          en: `${baseUrl}/privacy`,
+          'es-ES': `${baseUrl}/privacy`,
+          'en-US': `${baseUrl}/privacy`,
         },
       },
     },
@@ -35,6 +41,9 @@ export default function sitemap(): MetadataRoute.Sitemap {
       alternates: {
         languages: {
           es: `${baseUrl}/terms`,
+          en: `${baseUrl}/terms`,
+          'es-ES': `${baseUrl}/terms`,
+          'en-US': `${baseUrl}/terms`,
         },
       },
     },

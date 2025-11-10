@@ -3,8 +3,10 @@ import Section from './Section'
 import FeatureCard from './FeatureCard'
 import { ArrowRight } from './Icons'
 import { useScrollAnimation } from './useScrollAnimation'
+import { useLanguage } from '@/lib/i18n/context/LanguageProvider'
 
 export default function FeaturePanel() {
+  const { t } = useLanguage()
   const textRef = useScrollAnimation<HTMLDivElement>({ direction: 'left', delay: 0 })
   const cardsRef = useScrollAnimation<HTMLDivElement>({ direction: 'right', delay: 200 })
 
@@ -20,9 +22,9 @@ export default function FeaturePanel() {
             ref={textRef.ref}
             className={`space-y-4 flex flex-col justify-center align-center m-auto transition-all duration-1000 ${textRef.animationClasses}`}
           >
-            <p className="text-6xl">Todo lo que tu PyME necesita para crecer</p>
-            <p className="muted max-w-md">Centraliza ventas, pedidos y entregas, coordina a tu equipo y gana visibilidad en una sola plataforma.</p>
-            <a href="#" className="inline-flex items-center gap-2 text-brand font-medium link-underline">Ver todas las funcionalidades
+            <p className="text-6xl">{t('features.title')}</p>
+            <p className="muted max-w-md">{t('features.description')}</p>
+            <a href="#" className="inline-flex items-center gap-2 text-brand font-medium link-underline">{t('features.viewAll')}
               <span className="inline-flex items-center justify-center size-6 rounded-full bg-brand text-ink" aria-hidden>
                 <ArrowRight size={14}/>
               </span>
@@ -32,10 +34,10 @@ export default function FeaturePanel() {
             ref={cardsRef.ref}
             className={`grid grid-cols-1 sm:grid-cols-2 gap-5 transition-all duration-1000 ${cardsRef.animationClasses}`}
           >
-            <FeatureCard title="Integración con múltiples marketplaces" imageSrc="/img/marketplace.png"/>
-            <FeatureCard title="Panel único de pedidos y ventas" imageSrc="/img/panel.png"/>
-            <FeatureCard title="Asignación y seguimiento de repartos" imageSrc="/img/truck.png"/>
-            <FeatureCard title="Control de roles y colaboradores" imageSrc="/img/order.png"/>
+            <FeatureCard title={t('features.marketplaceIntegration')} imageSrc="/img/marketplace.png"/>
+            <FeatureCard title={t('features.unifiedPanel')} imageSrc="/img/panel.png"/>
+            <FeatureCard title={t('features.deliveryTracking')} imageSrc="/img/truck.png"/>
+            <FeatureCard title={t('features.roleControl')} imageSrc="/img/order.png"/>
           </div>
         </div>
       </div>

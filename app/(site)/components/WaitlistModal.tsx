@@ -1,6 +1,7 @@
 "use client"
 import React, { useState } from 'react'
 import { ArrowRight } from './Icons'
+import { useLanguage } from '@/lib/i18n/context/LanguageProvider'
 
 type WaitlistModalProps = {
   isOpen: boolean
@@ -8,6 +9,7 @@ type WaitlistModalProps = {
 }
 
 export default function WaitlistModal({ isOpen, onClose }: WaitlistModalProps) {
+  const { t } = useLanguage()
   const [email, setEmail] = useState('')
   const [agreeToPrivacy, setAgreeToPrivacy] = useState(true)
   const [isSubmitting, setIsSubmitting] = useState(false)
@@ -19,7 +21,7 @@ export default function WaitlistModal({ isOpen, onClose }: WaitlistModalProps) {
     e.preventDefault()
     
     if (!email || !agreeToPrivacy) {
-      setMessage({ type: 'error', text: 'Por favor, completa todos los campos requeridos.' })
+      setMessage({ type: 'error', text: t('waitlist.requiredFields') })
       return
     }
 
@@ -38,17 +40,17 @@ export default function WaitlistModal({ isOpen, onClose }: WaitlistModalProps) {
       const data = await response.json()
 
       if (response.ok) {
-        setMessage({ type: 'success', text: '¡Te has unido exitosamente a la lista de espera!' })
+        setMessage({ type: 'success', text: t('waitlist.success') })
         setEmail('')
         setTimeout(() => {
           onClose()
           setMessage(null)
         }, 2000)
       } else {
-        setMessage({ type: 'error', text: data.error || 'Hubo un error al unirte a la lista. Inténtalo de nuevo.' })
+        setMessage({ type: 'error', text: data.error || t('waitlist.error') })
       }
     } catch (error) {
-      setMessage({ type: 'error', text: 'Hubo un error de conexión. Inténtalo de nuevo.' })
+      setMessage({ type: 'error', text: t('waitlist.connectionError') })
     } finally {
       setIsSubmitting(false)
     }
@@ -68,7 +70,7 @@ export default function WaitlistModal({ isOpen, onClose }: WaitlistModalProps) {
         <button
           onClick={onClose}
           className="absolute top-4 right-4 text-slate-400 hover:text-white transition-colors"
-          aria-label="Cerrar modal"
+          aria-label={t('waitlist.closeModal')}
         >
           <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
             <path d="M18 6L6 18M6 6l12 12" strokeLinecap="round"/>
@@ -77,12 +79,12 @@ export default function WaitlistModal({ isOpen, onClose }: WaitlistModalProps) {
 
         {/* Title */}
         <h2 className="text-2xl font-bold text-white mb-3">
-          Únete a la lista de espera
+          {t('waitlist.title')}
         </h2>
 
         {/* Intro text */}
         <p className="text-slate-300 text-sm mb-6 leading-relaxed">
-        Obtén acceso anticipado a nuestro lanzamiento. Únete a la lista de espera.
+          {t('waitlist.description')}
         </p>
 
         {/* Alert box */}
@@ -95,7 +97,7 @@ export default function WaitlistModal({ isOpen, onClose }: WaitlistModalProps) {
           </div>
           <div className="flex-1">
             <p className="text-amber-400 text-sm">
-              ¡Pronto nos lanzaremos! Sigue nuestra{' '}
+              {t('waitlist.comingSoon')}{' '}
               <a 
                 href="#" 
                 className="underline hover:text-amber-300 transition-colors"
@@ -104,9 +106,9 @@ export default function WaitlistModal({ isOpen, onClose }: WaitlistModalProps) {
                   // Aquí puedes agregar el enlace a ProductHunt o la página de prelanzamiento
                 }}
               >
-                página de prelanzamiento
+                {t('waitlist.prelaunchPage')}
               </a>{' '}
-              para recibir notificaciones.
+              {t('waitlist.forNotifications')}
             </p>
           </div>
         </div>
@@ -116,14 +118,14 @@ export default function WaitlistModal({ isOpen, onClose }: WaitlistModalProps) {
           {/* Email input */}
           <div>
             <label htmlFor="email" className="block text-white text-sm font-medium mb-2">
-              Dirección de correo electrónico
+              {t('waitlist.emailLabel')}
             </label>
             <input
               type="email"
               id="email"
               value={email}
               onChange={(e) => setEmail(e.target.value)}
-              placeholder="Introduce tu correo electrónico"
+              placeholder={t('waitlist.emailPlaceholder')}
               className="w-full px-4 py-3 bg-slate-800 border border-slate-700 rounded-lg text-white placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-brand focus:border-transparent transition-all"
               required
               disabled={isSubmitting}
@@ -142,9 +144,9 @@ export default function WaitlistModal({ isOpen, onClose }: WaitlistModalProps) {
               disabled={isSubmitting}
             />
             <label htmlFor="privacy" className="text-sm text-slate-300">
-              Estoy de acuerdo con la{' '}
+              {t('waitlist.privacyAgree')}{' '}
               <a href="/privacy" target="_blank" rel="noopener noreferrer" className="text-brand underline hover:text-brand600 transition-colors">
-                política de privacidad
+                {t('waitlist.privacyPolicy')}
               </a>
             </label>
           </div>
@@ -172,11 +174,11 @@ export default function WaitlistModal({ isOpen, onClose }: WaitlistModalProps) {
                   <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4" fill="none"/>
                   <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"/>
                 </svg>
-                Procesando...
+                {t('waitlist.processing')}
               </>
             ) : (
               <>
-                Únete a la lista de espera
+                {t('waitlist.submit')}
                 <ArrowRight size={16} />
               </>
             )}

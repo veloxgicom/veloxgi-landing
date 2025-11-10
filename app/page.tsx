@@ -1,12 +1,7 @@
 import type { Metadata } from 'next'
 import { WaitlistProvider } from './(site)/components/WaitlistProvider'
 import Header from './(site)/components/Header'
-import Hero from './(site)/components/Hero'
-import FeaturePanel from './(site)/components/FeaturePanel'
-import PromoStrip from './(site)/components/PromoStrip'
-import GalleryMosaic from './(site)/components/GalleryMosaic'
-import DarkCta from './(site)/components/DarkCta'
-import Footer from './(site)/components/Footer'
+import Sections from './(site)/components/Sections'
 
 export const metadata: Metadata = {
   title: 'Inicio',
@@ -115,26 +110,7 @@ export default function Page() {
       <WaitlistProvider>
         <main id="main">
           <Header />
-          <section id="inicio" aria-label="Sección de inicio">
-            <Hero />
-          </section>
-          <section id="caracteristicas" aria-label="Características de la plataforma">
-            <FeaturePanel />
-          </section>
-          <PromoStrip />
-          <section id="ventajas" aria-label="Ventajas de Veloxgi">
-            <GalleryMosaic />
-          </section>
-          <section id="lista-espera" aria-label="Únete a la lista de espera">
-            <DarkCta />
-          </section>
-          {/* <BrandCarousel /> */}
-          {/* <section id="testimonios" aria-label="Testimonios de clientes">
-            <Testimonials />
-          </section> */}
-          <section id="contacto" aria-label="Información de contacto">
-            <Footer />
-          </section>
+          <Sections />
         </main>
       </WaitlistProvider>
     </>
