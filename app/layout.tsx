@@ -1,5 +1,6 @@
 import type { Metadata, Viewport } from 'next'
 import { Inter } from 'next/font/google'
+import Script from 'next/script'
 import './globals.css'
 import GoogleAnalytics from './(site)/components/GoogleAnalytics'
 import { LanguageProvider } from '@/lib/i18n/context/LanguageProvider'
@@ -149,6 +150,10 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
     <html lang="es" className={inter.variable} suppressHydrationWarning>
       <body className="font-sans">
+        <Script
+          src="https://t.contentsquare.net/uxa/0714a3384226a.js"
+          strategy="afterInteractive"
+        />
         <LanguageProvider>
           <ClientLang />
           <GoogleAnalytics />
