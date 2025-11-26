@@ -107,12 +107,12 @@ export const metadata: Metadata = {
   classification: 'Business Software',
   icons: {
     icon: [
-      { url: '/favicon.webp', type: 'image/webp' },
+      { url: '/favicon.png', type: 'image/png' },
     ],
     apple: [
-      { url: '/favicon.webp', type: 'image/webp' },
+      { url: '/favicon.png', type: 'image/png' },
     ],
-    shortcut: '/favicon.webp',
+    shortcut: '/favicon.png',
   },
   appleWebApp: {
     capable: true,
